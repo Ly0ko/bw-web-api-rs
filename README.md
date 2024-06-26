@@ -1,5 +1,5 @@
 # BW Web API (rust edition)
-![crates.io](https://img.shields.io/crates/v/bw-web-api-rs.svg)
+[![crates.io](https://img.shields.io/crates/v/bw-web-api-rs.svg)](https://crates.io/crates/bw-web-api-rs)
 
 A Rust library for interacting with the StarCraft Brood War API.
 
