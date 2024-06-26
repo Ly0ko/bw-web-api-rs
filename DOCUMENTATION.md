@@ -198,7 +198,7 @@ pub async fn match_maker_game_info_player_info(&self, match_id: &str) -> Result<
 
 #### `aurora_profile_by_toon`
 
-Fetches aurora profile by toon.
+Fetches profile information for a given player (stats, game history, etc).
 
 ```rust
 pub async fn aurora_profile_by_toon(&self, toon: &str, gateway: Region, mask: AuroraProfileByToonV2FieldMask) -> Result<Value, ApiError> {
