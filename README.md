@@ -12,6 +12,8 @@ Not every endpoint is working yet and this is still a work in progress. However,
 
 # Usage
 
+This library makes use of async/await, so you will need to use your preferred async runtime, such as [tokio](https://github.com/tokio-rs/tokio).
+
 ```rust
 use bw_api::{AuroraProfileByToonV2FieldMask, BWClient, Region, SCApi};
 
