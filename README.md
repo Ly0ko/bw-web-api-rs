@@ -34,6 +34,7 @@ async fn main() {
     }
 }
 ```
+You can find rough documentation for the endpoints [here](DOCUMENTATION.md).
 
 # StarCraft Port
 
