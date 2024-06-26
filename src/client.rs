@@ -1,6 +1,7 @@
 use reqwest::Client;
 use crate::error::ApiError;
 
+#[derive(Clone)]
 pub struct BWClient {
     client: Client,
     base_url: String,

@@ -1,6 +1,6 @@
 [package]
 name = "bw-web-api-rs"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Tyler Anton"]
 description = "A Rust library for the StarCraft Brood War API"
 license = "MIT"
