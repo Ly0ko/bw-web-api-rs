@@ -1,7 +1,13 @@
 [package]
 name = "bw-web-api-rs"
 version = "0.1.0"
+authors = ["Tyler Anton"]
+description = "A Rust library for the StarCraft Brood War API"
+license = "MIT"
+homepage = "https://github.com/Ly0ko/bw-web-api-rs"
+repository = "https://github.com/Ly0ko/bw-web-api-rs"
 edition = "2021"
+readme = "README.md"
 
 [dependencies]
 reqwest = "0.12.5"
