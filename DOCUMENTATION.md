@@ -96,7 +96,7 @@ async fn schema_fetch<T: for<'de> Deserialize<'de> + Serialize>(&self, path: &st
 
 #### `classic_files_global_maps_1v1`
 
-Fetches global maps for 1v1 matches.
+Fetches list of ladder maps by season.
 
 ```rust
 pub async fn classic_files_global_maps_1v1(&self) -> Result<Value, ApiError> {
@@ -106,7 +106,7 @@ pub async fn classic_files_global_maps_1v1(&self) -> Result<Value, ApiError> {
 
 #### `gateway`
 
-Fetches gateway information.
+Fetches gateway information (gateways, ids, online player counts).
 
 ```rust
 pub async fn gateway(&self) -> Result<Value, ApiError> {
@@ -116,7 +116,7 @@ pub async fn gateway(&self) -> Result<Value, ApiError> {
 
 #### `leaderboard`
 
-Fetches leaderboard information.
+Fetches list of all leaderboards.
 
 ```rust
 pub async fn leaderboard(&self) -> Result<Value, ApiError> {
@@ -126,7 +126,7 @@ pub async fn leaderboard(&self) -> Result<Value, ApiError> {
 
 #### `leaderboard_entity`
 
-Fetches a specific leaderboard entity.
+Fetches paginated player rankings on the leaderboard.
 
 ```rust
 pub async fn leaderboard_entity(&self, leaderboard: Leaderboard, offset: i32, length: i32) -> Result<Value, ApiError> {
@@ -143,7 +143,7 @@ pub async fn leaderboard_entity(&self, leaderboard: Leaderboard, offset: i32, le
 
 #### `leaderboard_name_search`
 
-Searches for a name in the leaderboard.
+Searches for ranked player by name on the leaderboard.
 
 ```rust
 pub async fn leaderboard_name_search(&self, leaderboard: Leaderboard, toon: &str) -> Result<Value, ApiError> {
@@ -154,7 +154,7 @@ pub async fn leaderboard_name_search(&self, leaderboard: Leaderboard, toon: &str
 
 #### `leaderboard_rank_by_toon`
 
-Fetches the rank of a toon in a leaderboard.
+Fetches ranked data for a given player.
 
 ```rust
 pub async fn leaderboard_rank_by_toon(&self, leaderboard: Leaderboard, toon: &str, gateway: Region) -> Result<Value, ApiError> {
@@ -165,7 +165,7 @@ pub async fn leaderboard_rank_by_toon(&self, leaderboard: Leaderboard, toon: &st
 
 #### `map_stats_by_toon`
 
-Fetches map statistics by toon.
+WIP: Not working yet.
 
 ```rust
 pub async fn map_stats_by_toon(&self, toon: &str, gateway: Region) -> Result<Value, ApiError> {
@@ -176,7 +176,7 @@ pub async fn map_stats_by_toon(&self, toon: &str, gateway: Region) -> Result<Val
 
 #### `match_maker_game_info_by_toon`
 
-Fetches matchmaker game information by toon.
+WIP: Not working yet.
 
 ```rust
 pub async fn match_maker_game_info_by_toon(&self, toon: &str, gateway: Region, game_mode: i32, season: i32, offset: i32, limit: i32) -> Result<Value, ApiError> {
@@ -187,7 +187,7 @@ pub async fn match_maker_game_info_by_toon(&self, toon: &str, gateway: Region, g
 
 #### `match_maker_game_info_player_info`
 
-Fetches matchmaker game player information by match ID.
+Fetches ranked match info and link to replay.
 
 ```rust
 pub async fn match_maker_game_info_player_info(&self, match_id: &str) -> Result<Value, ApiError> {
