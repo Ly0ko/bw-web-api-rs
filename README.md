@@ -2,10 +2,7 @@
 
 A Rust library for interacting with the StarCraft Brood War API.
 
-This is a port of the [bw-web-api](https://github.com/evanandrewrose/bw-web-api) library, which is written in TypeScript. You can find more information there such as the expected shape of responses, etc.
-
-When logged in to Starcraft: Remastered, StarCraft.exe creates a local web server that exposes these endpoints. These endpoints are used when
-exploring the ladder, viewing profiles, etc.
+This is a port of the [bw-web-api](https://github.com/evanandrewrose/bw-web-api) library, which is written in TypeScript. You can find more information there such as endpoint documentation, the expected shape of responses, etc.
 
 # Installation
 
@@ -14,7 +11,7 @@ exploring the ladder, viewing profiles, etc.
 # Usage
 
 ```rust
-use bw_api::{api::AuroraProfileByToonV2FieldMask, BWClient, Region, SCApi};
+use bw_api::{AuroraProfileByToonV2FieldMask, BWClient, Region, SCApi};
 
 #[tokio::main]
 async fn main() {
