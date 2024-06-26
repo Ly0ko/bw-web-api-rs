@@ -4,6 +4,8 @@ A Rust library for interacting with the StarCraft Brood War API.
 
 This is a port of the [bw-web-api](https://github.com/evanandrewrose/bw-web-api) library, which is written in TypeScript. You can find more information there such as endpoint documentation, the expected shape of responses, etc.
 
+Not every endpoint is working yet and this is still a work in progress. However, the most useful endpoints are implemented and working (eg. `aurora_profile_by_toon`).
+
 # Installation
 
 `cargo add bw-web-api-rs`
