@@ -7,23 +7,6 @@ This is a port of the [bw-web-api](https://github.com/evanandrewrose/bw-web-api)
 When logged in to Starcraft: Remastered, StarCraft.exe creates a local web server that exposes these endpoints. These endpoints are used when
 exploring the ladder, viewing profiles, etc.
 
-Below is a table of the known, supported endpoints and the corresponding methods exposed on the `SCApi` struct.
-
-| Endpoint                                                                      | `SCApi` method                                              | Notes                                        |
-| ----------------------------------------------------------------------------- | ----------------------------------------------------------- | -------------------------------------------- |
-| `/v1/file-set/classic.files.global.maps-1v1`                                  | `classic_files_global_maps_1v1()`                               | List of ladder maps by season                |
-| `/v1/gateway`                                                                 | `gateway()`                                                 | Gateways, ids, online player counts          |
-| `/v1/leaderboard/{ladder}?offset={offset}&length={length}`                    | `leaderboard_entity(ladder, offset, length)`                 | Paginated player rankings                    |
-| `/v1/leaderboard-name-search/{ladder}/{toon}`                                 | `leaderboard_name_search(toon)`                               | Name search of ranked players                |
-| `/v1/leaderboard-rank-by-toon/{ladder}/{toon}/{gateway}`                      | `leaderboard_rank_by_toon(ladder, toon, gateway)`              | Ranked data for a given profile              |
-| `/v1/leaderboard`                                                             | `leaderboard()`                                             | List of all leaderboards                     |
-| `/v1/map-stats-by-toon/{toon}/{gateway}`                                      | `map_stats_by_toon(toon, gateway)`                             | Win rate by map and season                   |
-| `/v1/matchmaker-gameinfo-playerinfo/{matchId}`                                | `match_maker_game_info_player_info(matchId)`                     | Ranked match info and link to replay         |
-| `/v2/aurora-profile-by-toon/{toon}/{gateway}?request_flags=scr_mmgameloading` | `aurora_profile_by_toon(toon, gateway, 'scr_mmgameloading')` | Minimal acct info                            |
-| `/v2/aurora-profile-by-toon/{toon}/{gateway}?request_flags=scr_mmtooninfo`    | `aurora_profile_by_toon(toon, gateway, 'scr_mmtooninfo')`    | Minimal acct info + recent game played count |
-| `/v2/aurora-profile-by-toon/{toon}/{gateway}?request_flags=scr_profile`       | `aurora_profile_by_toon(toon, gateway, 'scr_profile')`       | Full acct info                               |
-| `/v2/aurora-profile-by-toon/{toon}/{gateway}?request_flags=scr_tooninfo`      | `aurora_profile_by_toon(toon, gateway, 'scr_tooninfo')`      | Full acct info minus game history            |
-
 # Installation
 
 `cargo add bw-web-api-rs`
